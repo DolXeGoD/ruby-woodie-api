@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title> TEST PAGE </title>
+</head>
+<body>
+<h2>목록보기</h2>
+<table style="border : 1px solid gray">
+    <tr>
+        <td>순번</td>
+        <td>내용</td>
+    </tr>
+    <tr th:each="test : ${testList}">
+        <td th:text="${test.idx}"></td>
+        <td th:text="${test.testContent}"></td>
+    </tr>
+</table>
+</body>
+</html>
